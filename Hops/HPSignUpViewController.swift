@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HPSignUpViewController.swift
 //  Hops
 //
 //  Created by Brian Correa on 11/13/16.
@@ -8,18 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HPSignUpViewController: HPViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let frame = UIScreen.main.bounds
+        let view = UIView(frame: frame)
+        view.backgroundColor = .green
+        
+        self.view = view
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-
 }
-

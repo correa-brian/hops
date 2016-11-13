@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		D3230C2C1DD8CCD800161042 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230C2B1DD8CCD800161042 /* AppDelegate.swift */; };
-		D3230C2E1DD8CCD800161042 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230C2D1DD8CCD800161042 /* ViewController.swift */; };
-		D3230C311DD8CCD800161042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3230C2F1DD8CCD800161042 /* Main.storyboard */; };
 		D3230C331DD8CCD800161042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3230C321DD8CCD800161042 /* Assets.xcassets */; };
-		D3230C361DD8CCD800161042 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3230C341DD8CCD800161042 /* LaunchScreen.storyboard */; };
 		D3230C411DD8CCD800161042 /* HopsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230C401DD8CCD800161042 /* HopsTests.swift */; };
 		D3230C4C1DD8CCD800161042 /* HopsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230C4B1DD8CCD800161042 /* HopsUITests.swift */; };
+		D3230C5C1DD8CD4400161042 /* HPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230C5B1DD8CD4400161042 /* HPViewController.swift */; };
+		D3230C5E1DD8CD6100161042 /* HPLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230C5D1DD8CD6100161042 /* HPLoginViewController.swift */; };
+		D3230C611DD8D05900161042 /* HPWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230C601DD8D05900161042 /* HPWelcomeViewController.swift */; };
+		D3230C631DD8DA3000161042 /* HPSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230C621DD8DA3000161042 /* HPSignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +37,7 @@
 /* Begin PBXFileReference section */
 		D3230C281DD8CCD800161042 /* Hops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3230C2B1DD8CCD800161042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D3230C2D1DD8CCD800161042 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D3230C301DD8CCD800161042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3230C321DD8CCD800161042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D3230C351DD8CCD800161042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3230C371DD8CCD800161042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3230C3C1DD8CCD800161042 /* HopsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HopsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3230C401DD8CCD800161042 /* HopsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopsTests.swift; sourceTree = "<group>"; };
@@ -47,6 +45,10 @@
 		D3230C471DD8CCD800161042 /* HopsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HopsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3230C4B1DD8CCD800161042 /* HopsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopsUITests.swift; sourceTree = "<group>"; };
 		D3230C4D1DD8CCD800161042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3230C5B1DD8CD4400161042 /* HPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPViewController.swift; sourceTree = "<group>"; };
+		D3230C5D1DD8CD6100161042 /* HPLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPLoginViewController.swift; sourceTree = "<group>"; };
+		D3230C601DD8D05900161042 /* HPWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPWelcomeViewController.swift; sourceTree = "<group>"; };
+		D3230C621DD8DA3000161042 /* HPSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPSignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +99,10 @@
 		D3230C2A1DD8CCD800161042 /* Hops */ = {
 			isa = PBXGroup;
 			children = (
+				D3230C5A1DD8CD1700161042 /* BaseClasses */,
+				D3230C591DD8CD1000161042 /* VIewControllers */,
 				D3230C2B1DD8CCD800161042 /* AppDelegate.swift */,
-				D3230C2D1DD8CCD800161042 /* ViewController.swift */,
-				D3230C2F1DD8CCD800161042 /* Main.storyboard */,
 				D3230C321DD8CCD800161042 /* Assets.xcassets */,
-				D3230C341DD8CCD800161042 /* LaunchScreen.storyboard */,
 				D3230C371DD8CCD800161042 /* Info.plist */,
 			);
 			path = Hops;
@@ -123,6 +124,32 @@
 				D3230C4D1DD8CCD800161042 /* Info.plist */,
 			);
 			path = HopsUITests;
+			sourceTree = "<group>";
+		};
+		D3230C591DD8CD1000161042 /* VIewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D3230C5F1DD8D02200161042 /* AuthVcs */,
+			);
+			name = VIewControllers;
+			sourceTree = "<group>";
+		};
+		D3230C5A1DD8CD1700161042 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				D3230C5B1DD8CD4400161042 /* HPViewController.swift */,
+			);
+			name = BaseClasses;
+			sourceTree = "<group>";
+		};
+		D3230C5F1DD8D02200161042 /* AuthVcs */ = {
+			isa = PBXGroup;
+			children = (
+				D3230C5D1DD8CD6100161042 /* HPLoginViewController.swift */,
+				D3230C601DD8D05900161042 /* HPWelcomeViewController.swift */,
+				D3230C621DD8DA3000161042 /* HPSignUpViewController.swift */,
+			);
+			name = AuthVcs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3230C361DD8CCD800161042 /* LaunchScreen.storyboard in Resources */,
 				D3230C331DD8CCD800161042 /* Assets.xcassets in Resources */,
-				D3230C311DD8CCD800161042 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3230C2E1DD8CCD800161042 /* ViewController.swift in Sources */,
+				D3230C5E1DD8CD6100161042 /* HPLoginViewController.swift in Sources */,
+				D3230C5C1DD8CD4400161042 /* HPViewController.swift in Sources */,
+				D3230C631DD8DA3000161042 /* HPSignUpViewController.swift in Sources */,
 				D3230C2C1DD8CCD800161042 /* AppDelegate.swift in Sources */,
+				D3230C611DD8D05900161042 /* HPWelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,25 +322,6 @@
 			targetProxy = D3230C481DD8CCD800161042 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		D3230C2F1DD8CCD800161042 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D3230C301DD8CCD800161042 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D3230C341DD8CCD800161042 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D3230C351DD8CCD800161042 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D3230C4E1DD8CCD800161042 /* Debug */ = {
