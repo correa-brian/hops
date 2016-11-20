@@ -24,8 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mapVc =  HPMapViewController()
         mapVc.tabBarItem = UITabBarItem(title: "Recs", image: UIImage(named:"globe-icon"), tag: 1)
 
-        let tabCtr = UITabBarController()
         let controllers = [homeVc, mapVc]
+        
+        let tabCtr = UITabBarController()
         tabCtr.viewControllers = controllers
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
