@@ -15,6 +15,8 @@
 		D3230C5E1DD8CD6100161042 /* HPLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230C5D1DD8CD6100161042 /* HPLoginViewController.swift */; };
 		D3230C611DD8D05900161042 /* HPWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230C601DD8D05900161042 /* HPWelcomeViewController.swift */; };
 		D3230C631DD8DA3000161042 /* HPSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230C621DD8DA3000161042 /* HPSignUpViewController.swift */; };
+		D3C779CA1DE1DF21003F4FEB /* HPHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C779C91DE1DF21003F4FEB /* HPHomeViewController.swift */; };
+		D3C779CC1DE1E9FE003F4FEB /* HPMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C779CB1DE1E9FE003F4FEB /* HPMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		D3230C5D1DD8CD6100161042 /* HPLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPLoginViewController.swift; sourceTree = "<group>"; };
 		D3230C601DD8D05900161042 /* HPWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPWelcomeViewController.swift; sourceTree = "<group>"; };
 		D3230C621DD8DA3000161042 /* HPSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPSignUpViewController.swift; sourceTree = "<group>"; };
+		D3C779C91DE1DF21003F4FEB /* HPHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPHomeViewController.swift; sourceTree = "<group>"; };
+		D3C779CB1DE1E9FE003F4FEB /* HPMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 		D3230C591DD8CD1000161042 /* VIewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D3C779C81DE1DEF8003F4FEB /* AppVcs */,
 				D3230C5F1DD8D02200161042 /* AuthVcs */,
 			);
 			name = VIewControllers;
@@ -150,6 +155,15 @@
 				D3230C621DD8DA3000161042 /* HPSignUpViewController.swift */,
 			);
 			name = AuthVcs;
+			sourceTree = "<group>";
+		};
+		D3C779C81DE1DEF8003F4FEB /* AppVcs */ = {
+			isa = PBXGroup;
+			children = (
+				D3C779C91DE1DF21003F4FEB /* HPHomeViewController.swift */,
+				D3C779CB1DE1E9FE003F4FEB /* HPMapViewController.swift */,
+			);
+			name = AppVcs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,9 +300,11 @@
 			files = (
 				D3230C5E1DD8CD6100161042 /* HPLoginViewController.swift in Sources */,
 				D3230C5C1DD8CD4400161042 /* HPViewController.swift in Sources */,
+				D3C779CC1DE1E9FE003F4FEB /* HPMapViewController.swift in Sources */,
 				D3230C631DD8DA3000161042 /* HPSignUpViewController.swift in Sources */,
 				D3230C2C1DD8CCD800161042 /* AppDelegate.swift in Sources */,
 				D3230C611DD8D05900161042 /* HPWelcomeViewController.swift in Sources */,
+				D3C779CA1DE1DF21003F4FEB /* HPHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +530,7 @@
 				D3230C521DD8CCD800161042 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3230C531DD8CCD800161042 /* Build configuration list for PBXNativeTarget "HopsTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +539,7 @@
 				D3230C551DD8CCD800161042 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3230C561DD8CCD800161042 /* Build configuration list for PBXNativeTarget "HopsUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +548,7 @@
 				D3230C581DD8CCD800161042 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

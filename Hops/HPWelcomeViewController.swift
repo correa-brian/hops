@@ -62,11 +62,13 @@ class HPWelcomeViewController: HPViewController {
         
         if sender.titleLabel?.text == "Login"{
             let loginVc = HPLoginViewController()
-            self.navigationController?.pushViewController(loginVc, animated: true)
+            self.navigationController?.present(loginVc, animated: true, completion: nil)
+//            self.navigationController?.pushViewController(loginVc, animated: true)
         }
         else{
             let signUpVc = HPSignUpViewController()
-            self.navigationController?.pushViewController(signUpVc, animated: true)
+            self.navigationController?.present(signUpVc, animated: true, completion: nil)
+//            self.navigationController?.pushViewController(signUpVc, animated: true)
         }
     }
 
