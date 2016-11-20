@@ -20,6 +20,12 @@ class HPLoginViewController: HPViewController, UITextFieldDelegate {
         let width = frame.size.width
         let height = frame.size.height
         
+        let cancelBtn = UIButton(type: .custom)
+        cancelBtn.frame = CGRect(x: 10, y: 15, width: 32, height: 32)
+        cancelBtn.backgroundColor = .orange
+        cancelBtn.addTarget(self, action: #selector(HPViewController.exitModal), for: .touchUpInside)
+        view.addSubview(cancelBtn)
+        
         let loginText = ["Username", "Password"]
         var y = height*0.3
         
