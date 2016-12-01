@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mapVc.tabBarItem = UITabBarItem(title: "Recs", image: UIImage(named:"globe-icon"), tag: 1)
 
         let controllers = [homeVc, mapVc]
+        
         let tabCtr = UITabBarController()
         tabCtr.viewControllers = controllers
         
