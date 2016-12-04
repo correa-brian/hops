@@ -52,6 +52,19 @@ class HPSignUpViewController: HPViewController, UITextFieldDelegate {
         super.viewDidLoad()
     }
     
+    override func exitModal() {
+        super.exitModal()
+        
+        for textField in self.textFields {
+            if textField.isFirstResponder {
+                textField.resignFirstResponder()
+                break
+            }
+        }
+        
+    }
+    
+    //MARK: TextField Delegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("textFieldShouldReturn")
         
@@ -79,7 +92,7 @@ class HPSignUpViewController: HPViewController, UITextFieldDelegate {
                 return true
             }
             
-            print("Profile Info: \(profileInfo)")
+            self.userLogin(profileInfo: profileInfo)
             return true
         }
         
@@ -88,6 +101,22 @@ class HPSignUpViewController: HPViewController, UITextFieldDelegate {
         return true
     }
     
+    func userLogin(profileInfo: Dictionary<String, AnyObject>){
+        print("userLogin: \(profileInfo)")
+        
+        let homeVc = HPHomeViewController()
+        homeVc.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "profile_icon"), tag: 0)
+        
+        let mapVc =  HPMapViewController()
+        mapVc.tabBarItem = UITabBarItem(title: "Recs", image: UIImage(named:"globe-icon"), tag: 1)
+        
+        let controllers = [homeVc, mapVc]
+        
+        let tabCtr = UITabBarController()
+        tabCtr.viewControllers = controllers
+        
+        self.present(tabCtr, animated: true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

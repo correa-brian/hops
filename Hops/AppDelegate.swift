@@ -15,22 +15,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-//        let welcomeVc = HPWelcomeViewController()
-//        let navCtr = UINavigationController(rootViewController: welcomeVc)
+        let welcomeVc = HPWelcomeViewController()
+        let navCtr = UINavigationController(rootViewController: welcomeVc)
         
-        let homeVc = HPHomeViewController()
-        homeVc.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "profile_icon"), tag: 0)
-        
-        let mapVc =  HPMapViewController()
-        mapVc.tabBarItem = UITabBarItem(title: "Recs", image: UIImage(named:"globe-icon"), tag: 1)
-
-        let controllers = [homeVc, mapVc]
-        
-        let tabCtr = UITabBarController()
-        tabCtr.viewControllers = controllers
+//        let homeVc = HPHomeViewController()
+//        homeVc.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "profile_icon"), tag: 0)
+//        
+//        let mapVc =  HPMapViewController()
+//        mapVc.tabBarItem = UITabBarItem(title: "Recs", image: UIImage(named:"globe-icon"), tag: 1)
+//
+//        let controllers = [homeVc, mapVc]
+//        
+//        let tabCtr = UITabBarController()
+//        tabCtr.viewControllers = controllers
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = tabCtr
+        self.window?.rootViewController = navCtr
         self.window?.makeKeyAndVisible()
         return true
     }
