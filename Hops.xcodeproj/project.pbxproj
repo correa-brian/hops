@@ -16,6 +16,9 @@
 		D3230C5E1DD8CD6100161042 /* HPLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230C5D1DD8CD6100161042 /* HPLoginViewController.swift */; };
 		D3230C611DD8D05900161042 /* HPWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230C601DD8D05900161042 /* HPWelcomeViewController.swift */; };
 		D3230C631DD8DA3000161042 /* HPSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230C621DD8DA3000161042 /* HPSignUpViewController.swift */; };
+		D347586A1E21422100E50123 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34758691E21422100E50123 /* APIManager.swift */; };
+		D347586C1E214D6A00E50123 /* HPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D347586B1E214D6A00E50123 /* HPUser.swift */; };
+		D34758701E214E7900E50123 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D347586F1E214E7900E50123 /* Config.swift */; };
 		D3C779CA1DE1DF21003F4FEB /* HPHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C779C91DE1DF21003F4FEB /* HPHomeViewController.swift */; };
 		D3C779CC1DE1E9FE003F4FEB /* HPMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C779CB1DE1E9FE003F4FEB /* HPMapViewController.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +59,9 @@
 		D3230C5D1DD8CD6100161042 /* HPLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPLoginViewController.swift; sourceTree = "<group>"; };
 		D3230C601DD8D05900161042 /* HPWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPWelcomeViewController.swift; sourceTree = "<group>"; };
 		D3230C621DD8DA3000161042 /* HPSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPSignUpViewController.swift; sourceTree = "<group>"; };
+		D34758691E21422100E50123 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = Utils/APIManager.swift; sourceTree = "<group>"; };
+		D347586B1E214D6A00E50123 /* HPUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HPUser.swift; path = Models/HPUser.swift; sourceTree = "<group>"; };
+		D347586F1E214E7900E50123 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		D3C779C91DE1DF21003F4FEB /* HPHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPHomeViewController.swift; sourceTree = "<group>"; };
 		D3C779CB1DE1E9FE003F4FEB /* HPMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPMapViewController.swift; sourceTree = "<group>"; };
 		E274C602F715FD5AFEB61744 /* Pods-Hops.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hops.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hops/Pods-Hops.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +142,9 @@
 				D3230C2B1DD8CCD800161042 /* AppDelegate.swift */,
 				D3230C321DD8CCD800161042 /* Assets.xcassets */,
 				D3230C371DD8CCD800161042 /* Info.plist */,
+				D34758691E21422100E50123 /* APIManager.swift */,
+				D347586B1E214D6A00E50123 /* HPUser.swift */,
+				D347586F1E214E7900E50123 /* Config.swift */,
 			);
 			path = Hops;
 			sourceTree = "<group>";
@@ -377,11 +386,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D347586C1E214D6A00E50123 /* HPUser.swift in Sources */,
+				D347586A1E21422100E50123 /* APIManager.swift in Sources */,
 				D3230C5E1DD8CD6100161042 /* HPLoginViewController.swift in Sources */,
 				D3230C5C1DD8CD4400161042 /* HPViewController.swift in Sources */,
 				D3C779CC1DE1E9FE003F4FEB /* HPMapViewController.swift in Sources */,
 				D3230C631DD8DA3000161042 /* HPSignUpViewController.swift in Sources */,
 				D3230C2C1DD8CCD800161042 /* AppDelegate.swift in Sources */,
+				D34758701E214E7900E50123 /* Config.swift in Sources */,
 				D3230C611DD8D05900161042 /* HPWelcomeViewController.swift in Sources */,
 				D3C779CA1DE1DF21003F4FEB /* HPHomeViewController.swift in Sources */,
 			);
