@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25E7757952FC005F92CF958D /* Pods_Hops.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423C43E5A6508138AD1AB84D /* Pods_Hops.framework */; };
 		D3230C2C1DD8CCD800161042 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230C2B1DD8CCD800161042 /* AppDelegate.swift */; };
 		D3230C331DD8CCD800161042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3230C321DD8CCD800161042 /* Assets.xcassets */; };
 		D3230C411DD8CCD800161042 /* HopsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3230C401DD8CCD800161042 /* HopsTests.swift */; };
@@ -37,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		423C43E5A6508138AD1AB84D /* Pods_Hops.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hops.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		937AD3DE2C07D249055E0615 /* Pods_HopsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HopsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E0119639A7FD4F9E68F03E9 /* Pods_HopsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HopsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFFB8B6614553C2EE4C0F0B0 /* Pods-Hops.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hops.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hops/Pods-Hops.release.xcconfig"; sourceTree = "<group>"; };
 		D3230C281DD8CCD800161042 /* Hops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3230C2B1DD8CCD800161042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3230C321DD8CCD800161042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +58,7 @@
 		D3230C621DD8DA3000161042 /* HPSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPSignUpViewController.swift; sourceTree = "<group>"; };
 		D3C779C91DE1DF21003F4FEB /* HPHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPHomeViewController.swift; sourceTree = "<group>"; };
 		D3C779CB1DE1E9FE003F4FEB /* HPMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPMapViewController.swift; sourceTree = "<group>"; };
+		E274C602F715FD5AFEB61744 /* Pods-Hops.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hops.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hops/Pods-Hops.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E7757952FC005F92CF958D /* Pods_Hops.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +87,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B76601E71E73BF7010E1D8F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				423C43E5A6508138AD1AB84D /* Pods_Hops.framework */,
+				937AD3DE2C07D249055E0615 /* Pods_HopsTests.framework */,
+				9E0119639A7FD4F9E68F03E9 /* Pods_HopsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF0B5D698B19EB8FFA8DAB65 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E274C602F715FD5AFEB61744 /* Pods-Hops.debug.xcconfig */,
+				AFFB8B6614553C2EE4C0F0B0 /* Pods-Hops.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D3230C1F1DD8CCD800161042 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +113,8 @@
 				D3230C3F1DD8CCD800161042 /* HopsTests */,
 				D3230C4A1DD8CCD800161042 /* HopsUITests */,
 				D3230C291DD8CCD800161042 /* Products */,
+				CF0B5D698B19EB8FFA8DAB65 /* Pods */,
+				B76601E71E73BF7010E1D8F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3230C501DD8CCD800161042 /* Build configuration list for PBXNativeTarget "Hops" */;
 			buildPhases = (
+				16280FF12485CE60BC1381C9 /* [CP] Check Pods Manifest.lock */,
 				D3230C241DD8CCD800161042 /* Sources */,
 				D3230C251DD8CCD800161042 /* Frameworks */,
 				D3230C261DD8CCD800161042 /* Resources */,
+				FC5D0C5287D930782B4BB5EF /* [CP] Embed Pods Frameworks */,
+				0FF1E654FD0DAB5838040C48 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -292,6 +323,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FF1E654FD0DAB5838040C48 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hops/Pods-Hops-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		16280FF12485CE60BC1381C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC5D0C5287D930782B4BB5EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hops/Pods-Hops-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D3230C241DD8CCD800161042 /* Sources */ = {
@@ -435,6 +514,7 @@
 		};
 		D3230C511DD8CCD800161042 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E274C602F715FD5AFEB61744 /* Pods-Hops.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Hops/Info.plist;
@@ -447,6 +527,7 @@
 		};
 		D3230C521DD8CCD800161042 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFFB8B6614553C2EE4C0F0B0 /* Pods-Hops.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Hops/Info.plist;
