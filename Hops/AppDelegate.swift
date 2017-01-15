@@ -29,10 +29,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let tabCtr = UITabBarController()
 //        tabCtr.viewControllers = controllers
         
+        
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = navCtr
+        
+        self.checkCurrentUser()
         self.window?.makeKeyAndVisible()
         return true
+    }
+    
+    func checkCurrentUser(){
+        print("checkCurrentUser")
+        
+        APIManager.checkCurrentUser { response in
+            if let currentUserInfo = response["user"] as? Dictionary<String, AnyObject>{
+                print("currentUserInfo: \(currentUserInfo)")
+                
+                let notification = NSNotification(name: NSNotification.Name(rawValue: Constants.kUserLoggedInNotification), object: nil, userInfo: ["user": currentUserInfo])
+                
+                let notificationCenter = NotificationCenter.default
+                notificationCenter.post(notification as Notification)
+            }
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

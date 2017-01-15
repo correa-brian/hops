@@ -26,7 +26,7 @@ class HPLoginViewController: HPViewController, UITextFieldDelegate {
         cancelBtn.addTarget(self, action: #selector(HPViewController.exitModal), for: .touchUpInside)
         view.addSubview(cancelBtn)
         
-        let loginText = ["Username", "Password"]
+        let loginText = ["Email", "Password"]
         var y = height*0.3
         
         for text in loginText{
@@ -51,6 +51,19 @@ class HPLoginViewController: HPViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func exitModal() {
+        super.exitModal()
+        
+        for textField in self.loginFields {
+            if textField.isFirstResponder {
+                textField.resignFirstResponder()
+                break
+            }
+        }
+    }
+    
+    //MARK: TextField Delegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("textFieldShouldReturn")
@@ -80,6 +93,7 @@ class HPLoginViewController: HPViewController, UITextFieldDelegate {
             }
             
             print("Profile Info: \(profileInfo)")
+            self.userLogin(profileInfo: profileInfo)
             return true
         }
         
@@ -87,6 +101,45 @@ class HPLoginViewController: HPViewController, UITextFieldDelegate {
         let nextField = self.loginFields[index+1]
         nextField.becomeFirstResponder()
         return true
+    }
+    
+    func userLogin(profileInfo: Dictionary<String, AnyObject>){
+        print("userLogin: \(profileInfo)")
+        
+        APIManager.postRequest(path: "/user/login", params: profileInfo, completion: { error, response in
+            if error != nil {
+                let errorObj = error?.userInfo
+                let errorMsg = errorObj!["message"] as! String
+                
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Message", message: errorMsg, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+                return
+            }
+            
+            if let result = response!["currentuser"] as? Dictionary<String, AnyObject>{
+                print("Result from API MANAGER: \(result)")
+                
+                DispatchQueue.main.async {
+                    self.postLoggedInNotification(currentUser: result)
+                    
+                    let homeVc = HPHomeViewController()
+                    homeVc.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "profile_icon"), tag: 0)
+                    
+                    let mapVc =  HPMapViewController()
+                    mapVc.tabBarItem = UITabBarItem(title: "Recs", image: UIImage(named:"globe-icon"), tag: 1)
+                    
+                    let controllers = [homeVc, mapVc]
+                    
+                    let tabCtr = UITabBarController()
+                    tabCtr.viewControllers = controllers
+                    
+                    self.present(tabCtr, animated: true, completion: nil)
+                }
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {

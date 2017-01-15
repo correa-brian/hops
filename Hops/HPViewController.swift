@@ -28,6 +28,8 @@ class HPViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("BASE User: \(HPViewController.currentUser.email)")
     }
     
     func exitModal(){
@@ -43,7 +45,12 @@ class HPViewController: UIViewController {
     }
     
     func userLoggedIn(notification: NSNotification){
-        print("userLoggedIn")
+        print("userLoggedIn Notification: \(notification)")
+        if let user = notification.userInfo!["user"] as? Dictionary<String, AnyObject>{
+            print("Line 50 in baseClass: \(user)")
+            HPViewController.currentUser.populate(profileInfo: user)
+        }
+        print("Current user: \(HPViewController.currentUser.email)")
     }
 
     override func didReceiveMemoryWarning() {

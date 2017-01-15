@@ -107,10 +107,22 @@ class HPSignUpViewController: HPViewController, UITextFieldDelegate {
         print("userLogin: \(profileInfo)")
         
         APIManager.postRequest(path: "/api/user", params: profileInfo, completion: { error, response in
-            if (response!["result"] as? Dictionary<String, AnyObject>) != nil{
+            if error != nil {
+                let errorObj = error?.userInfo
+                let errorMsg = errorObj!["message"] as! String
+                
                 DispatchQueue.main.async {
-                    
-                    self.postLoggedInNotification(currentUser: response!["result"] as! Dictionary<String, AnyObject>)
+                    let alert = UIAlertController(title: "Message", message: errorMsg, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+                return
+            }
+            
+            
+            if let result = response!["result"] as? Dictionary<String, AnyObject> {
+                DispatchQueue.main.async {
+                    self.postLoggedInNotification(currentUser: result)
         
                     let homeVc = HPHomeViewController()
                     homeVc.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "profile_icon"), tag: 0)

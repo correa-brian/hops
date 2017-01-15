@@ -43,7 +43,8 @@ class HPHomeViewController: HPViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print("Current user in ViewDidLoad: \(HPViewController.currentUser.email)")
     }
 
     override func didReceiveMemoryWarning() {

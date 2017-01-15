@@ -36,4 +36,17 @@ class APIManager: NSObject {
             }
         }
     }
+    
+    static func checkCurrentUser(completion:((_ results: Dictionary<String, AnyObject>) -> Void)?){
+        let url = Constants.baseUrl+"/user/currentuser"
+        Alamofire.request(url, method: .get, parameters: nil).responseJSON { response in
+            
+            if let json = response.result.value as? Dictionary<String, AnyObject>{
+                if completion != nil {
+                    completion!(json)
+                }
+            }
+        }
+    }
+    
 }
